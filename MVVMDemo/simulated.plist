@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>photo</key>
+	<array>
+		<dict>
+			<key>photoName</key>
+			<string>你离开了南京，从此没有人和我说话</string>
+			<key>thumbnailURL</key>
+			<string>http://upload.gdsayee.com.cn/ios/ylb/20170117110616/8083293914.png</string>
+		</dict>
+		<dict>
+			<key>photoName</key>
+			<string>山阴路的夏天</string>
+			<key>thumbnailURL</key>
+			<string>http://upload.gdsayee.com.cn/ios/ylb/20170208163733/0105249132.png</string>
+		</dict>
+		<dict>
+			<key>photoName</key>
+			<string>在每一条伤心的应天大街上</string>
+			<key>thumbnailURL</key>
+			<string>http://upload.gdsayee.com.cn/ios/ylb/20170209100445/9474377496.png</string>
+		</dict>
+		<dict>
+			<key>photoName</key>
+			<string>热河</string>
+			<key>thumbnailURL</key>
+			<string>http://upload.gdsayee.com.cn/android/property/20170207160028/15917354458/9150694394.jpg</string>
+		</dict>
+		<dict>
+			<key>photoName</key>
+			<string>关于郑州的记忆</string>
+			<key>thumbnailURL</key>
+			<string>http://upload.gdsayee.com.cn/android/ylb/20170208103204/18676920988/8305332528.jpg</string>
+		</dict>
+	</array>
+</dict>
+</plist>
