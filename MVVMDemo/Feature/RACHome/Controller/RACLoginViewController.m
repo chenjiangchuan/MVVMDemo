@@ -49,10 +49,6 @@
         @strongify(self);
         [self.viewModel.loginCommand execute:nil];
     }];
-    
-    [[self.loginButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeError:^(NSError *error) {
-        NSLog(@"登录失败 = %@", error);
-    }];
 }
 
 #pragma mark - Lazy Initialization

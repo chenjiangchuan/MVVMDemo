@@ -18,11 +18,11 @@ NSString *const LoginURL = @"users/login.json?";
 
 - (instancetype)init {
     if (self = [super init]) {
-        
         @weakify(self);
-        
         // 登录按钮enable的值取决于username和password，username必须为手机号，password必须大于6
-        _validLoginSignal = [[RACSignal combineLatest:@[RACObserve(self, username), RACObserve(self, password)] reduce:^(NSString *username, NSString *password) {
+        _validLoginSignal = [[RACSignal
+                              combineLatest:@[RACObserve(self, username), RACObserve(self, password)]
+                              reduce:^(NSString *username, NSString *password) {
             @strongify(self);
             return @([self isMobileNumber:username] && password.length >= 6);
         }] distinctUntilChanged];
@@ -39,7 +39,10 @@ NSString *const LoginURL = @"users/login.json?";
             parameters[@"tick"] = [self currentMilliSecond];
             parameters[@"username"] = self.username;
             
-            return [[RACNetworkRequest postHeaderField:headerField withURL:url parameters:parameters modeClass:nil] doNext:^(id x) {
+            return [[RACNetworkRequest postHeaderField:headerField
+                                               withURL:url
+                                            parameters:parameters
+                                             modeClass:nil] doNext:^(id x) {
                 NSLog(@"loginCommand\nx= %@", x);
                 
                 NSString *code = x[@"code"];

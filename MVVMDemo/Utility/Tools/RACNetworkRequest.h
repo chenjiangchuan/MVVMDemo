@@ -84,9 +84,6 @@ return MAXFLOAT;\
 
 SingleH(RACNetworkRequest)
 
-/** AFHTTPSessionManager */
-@property (nonatomic, strong, readonly) AFHTTPSessionManager *manager;
-
 /**
  *  @author chenjiangchuan, 17-02-16 15:02:34
  *

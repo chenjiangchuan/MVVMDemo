@@ -131,12 +131,17 @@ SingleM(RACNetworkRequest)
         [self setupHttpHeaderField:headerField withSessionManager:manager];
         
         NSURLSessionDataTask *dataTask =
-        [manager GET:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        [manager GET:urlString
+          parameters:parameters
+            progress:nil
+             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                 
             [self handleResponseObject:responseObject withSubscriber:subscriber];
+                 
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-           
+            
             [subscriber sendError:error];
+            
         }];
         
         // 结束后取消请求
@@ -172,10 +177,11 @@ SingleM(RACNetworkRequest)
         [subscriber sendNext:responseObject];
         [subscriber sendCompleted];
     } else { // 失败
-        NSError *error = [NSError errorWithDomain:@"requestDataError" code:-1 userInfo:responseObject];
+        NSError *error = [NSError errorWithDomain:@"requestDataError"
+                                             code:-1
+                                         userInfo:responseObject];
         [subscriber sendError:error];
     }
-    
 }
 
 #pragma mark - Public Methods
